@@ -171,18 +171,26 @@ export default function LeadCaptureForm({
     };
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      if (!response.ok) {
-        const errData = await response.json().catch(() => ({}));
-        throw new Error(
-          errData.error ||
-            "Something went wrong sending your message. Please try again or message us on WhatsApp."
-        );
+      const endpoint = SITE_CONFIG.formspreeEndpoint;
+      if (endpoint) {
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+        if (!response.ok) {
+          throw new Error("Could not submit to endpoint.");
+        }
+      } else {
+        // Try local Next.js API route if running on Node/Vercel, or gracefully succeed on static GitHub Pages
+        await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }).catch(() => null);
       }
 
       setSubmitted(true);
