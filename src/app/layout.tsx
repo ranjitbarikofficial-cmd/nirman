@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { LocaleProvider } from "@/context/LocaleContext";
 import { SITE_CONFIG } from "@/lib/site-data";
 
 const inter = Inter({
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   },
   description: SITE_CONFIG.description,
   keywords: [
-    "web design agency for small business",
+    "Nirman web design agency",
     "business website design",
     "online store builder",
     "high converting landing page",
@@ -49,12 +50,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="flex min-h-screen flex-col font-sans">
-        <Navbar />
-        <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
-          {children}
-        </main>
-        <Footer />
-        <FloatingWhatsApp />
+        <LocaleProvider>
+          <Navbar />
+          <main id="main-content" tabIndex={-1} className="flex-1 outline-none">
+            {children}
+          </main>
+          <Footer />
+          <FloatingWhatsApp />
+        </LocaleProvider>
       </body>
     </html>
   );

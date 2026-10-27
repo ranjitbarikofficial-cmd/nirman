@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TrendingUp, ArrowRight } from "lucide-react";
 import { PORTFOLIO_PROJECTS } from "@/lib/site-data";
+import { useLocale } from "@/context/LocaleContext";
 
 const CATEGORIES = [
   "All",
@@ -16,6 +17,7 @@ const CATEGORIES = [
 
 export default function PortfolioGrid() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const { currency } = useLocale();
 
   const filteredProjects =
     selectedCategory === "All"
@@ -55,65 +57,71 @@ export default function PortfolioGrid() {
 
       {/* Project Grid */}
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {filteredProjects.map((project) => (
-          <article
-            key={project.id}
-            className="group flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
-          >
-            <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
-              <Image
-                src={project.image}
-                alt={`${project.title} — ${project.category} showcase`}
-                width={600}
-                height={375}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <span className="absolute left-4 top-4 rounded-full bg-brand-navy/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
-                {project.category}
-              </span>
-            </div>
+        {filteredProjects.map((project) => {
+          const resultText = project.dynamicSalesResult
+            ? currency.rates.portfolioSalesResult
+            : project.result;
 
-            <div className="flex flex-1 flex-col justify-between p-6">
-              <div>
-                <div className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-800">
-                  <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
-                  <span>{project.result}</span>
-                </div>
-
-                <h2 className="mt-3 text-xl font-bold text-slate-900">
-                  {project.title}
-                </h2>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  {project.description}
-                </p>
+          return (
+            <article
+              key={project.id}
+              className="group flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} — ${project.category} showcase`}
+                  width={600}
+                  height={375}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <span className="absolute left-4 top-4 rounded-full bg-brand-navy/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                  {project.category}
+                </span>
               </div>
 
-              <div className="mt-6 border-t border-slate-100 pt-4">
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700"
+              <div className="flex flex-1 flex-col justify-between p-6">
+                <div>
+                  <div className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-800">
+                    <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
+                    <span>{resultText}</span>
+                  </div>
+
+                  <h2 className="mt-3 text-xl font-bold text-slate-900">
+                    {project.title}
+                  </h2>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    {project.description}
+                  </p>
+                </div>
+
+                <div className="mt-6 border-t border-slate-100 pt-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-4">
+                    <Link
+                      href="/contact"
+                      aria-label={`Build a website similar to ${project.title}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:text-brand-orange"
                     >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-4">
-                  <Link
-                    href="/contact"
-                    aria-label={`Build a website similar to ${project.title}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:text-brand-orange"
-                  >
-                    <span>Want a similar website? Get a free quote</span>
-                    <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                  </Link>
+                      <span>Want a similar website? Get a free quote</span>
+                      <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
     </div>
   );
