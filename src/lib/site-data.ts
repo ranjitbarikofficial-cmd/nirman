@@ -5,15 +5,15 @@
  */
 
 export const SITE_CONFIG = {
-  agencyName: "ApexWeb Studio", // Replace with your [AGENCY NAME]
+  agencyName: "Nirman Digital",
   tagline: "We Build Websites That Bring Your Business Online",
   description:
-    "We help business owners and first-time entrepreneurs get more customers, sales, and trust online with fast, mobile-friendly websites and online stores.",
-  url: "https://apexwebstudio.example.com",
-  email: "hello@apexwebstudio.com",
+    "Nirman Digital helps business owners and first-time entrepreneurs get more customers, sales, and trust online with fast, mobile-friendly websites and online stores.",
+  url: "https://nirmandigital.com",
+  email: "hello@nirmandigital.com",
   phone: "+1 (555) 234-5678",
   whatsappNumber: "15552345678", // Digits only with country code for wa.me link
-  whatsappMessage: "Hi! I'm interested in getting a website for my business.",
+  whatsappMessage: "Hi Nirman Digital! I'm interested in getting a website for my business.",
   address: "120 Broadway, Suite 400, New York, NY 10271",
   calendlyUrl: "/contact#book-call",
   socials: {
