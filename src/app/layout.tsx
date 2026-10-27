@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,6 +10,13 @@ import { SITE_CONFIG } from "@/lib/site-data";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const brandFont = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-brand",
+  weight: ["600", "700"],
   display: "swap",
 });
 
@@ -48,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${brandFont.variable}`}>
       <body className="flex min-h-screen flex-col font-sans">
         <LocaleProvider>
           <Navbar />

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, PhoneCall, ArrowRight, Sparkles, Globe } from "lucide-react";
+import { Menu, X, PhoneCall, ArrowRight, Globe } from "lucide-react";
 import {
   SITE_CONFIG,
   COUNTRIES,
@@ -91,19 +91,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 lg:px-8">
-        {/* Brand Logo: Only "Nirman" */}
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        {/* Brand Wordmark Only: No icon box, smaller & distinct font style */}
         <Link
           href="/"
-          className="flex items-center gap-2.5 text-2xl font-extrabold tracking-tight text-brand-navy"
+          className="font-brand text-lg font-semibold tracking-wider text-brand-navy transition-colors hover:text-brand-orange"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-navy text-brand-orange shadow-sm">
-            <Sparkles className="h-5 w-5" aria-hidden="true" />
-          </span>
-          <span>
-            {SITE_CONFIG.agencyName}
-            <span className="text-brand-orange">.</span>
-          </span>
+          {SITE_CONFIG.agencyName}
         </Link>
 
         {/* Desktop Primary Navigation */}

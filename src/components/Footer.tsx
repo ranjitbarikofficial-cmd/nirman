@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {
-  Sparkles,
   Mail,
   Phone,
   MapPin,
@@ -54,12 +53,9 @@ export default function Footer() {
           <div className="space-y-4">
             <Link
               href="/"
-              className="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white"
+              className="inline-block font-brand text-lg font-semibold tracking-wider text-white transition-colors hover:text-brand-orange"
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-orange text-white">
-                <Sparkles className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <span>{SITE_CONFIG.agencyName}</span>
+              {SITE_CONFIG.agencyName}
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-slate-400">
               {SITE_CONFIG.description}
