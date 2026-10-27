@@ -40,8 +40,10 @@ export default function Navbar() {
       <div className="border-b border-slate-100 bg-slate-900 text-xs text-slate-300">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-1.5 sm:px-6 lg:px-8">
           <p className="hidden font-medium text-slate-300 sm:block">
-            <span className="font-bold text-brand-orange">Nirman</span> —{" "}
-            {t.hero.badge}
+            <span className="font-brand text-sm font-bold italic lowercase text-brand-orange">
+              nirman
+            </span>{" "}
+            — {t.hero.badge}
           </p>
 
           <div className="flex w-full items-center justify-between gap-3 sm:w-auto sm:justify-end">
@@ -92,10 +94,10 @@ export default function Navbar() {
       </div>
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        {/* Brand Wordmark Only: No icon box, smaller & distinct font style */}
+        {/* Brand Wordmark Only: all lowercase ("small letter") in distinct editorial italic serif font */}
         <Link
           href="/"
-          className="font-brand text-lg font-semibold tracking-wider text-brand-navy transition-colors hover:text-brand-orange"
+          className="font-brand text-2xl font-bold italic lowercase tracking-wide text-brand-navy transition-colors hover:text-brand-orange"
         >
           {SITE_CONFIG.agencyName}
         </Link>

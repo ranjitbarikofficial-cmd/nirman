@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link
               href="/"
-              className="inline-block font-brand text-lg font-semibold tracking-wider text-white transition-colors hover:text-brand-orange"
+              className="inline-block font-brand text-2xl font-bold italic lowercase tracking-wide text-white transition-colors hover:text-brand-orange"
             >
               {SITE_CONFIG.agencyName}
             </Link>

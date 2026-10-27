@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -13,10 +13,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const brandFont = Plus_Jakarta_Sans({
+const brandFont = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-brand",
   weight: ["600", "700"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
