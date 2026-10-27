@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    line-height: 1.5;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    text-align: start;
+    overflow-wrap: break-word;
+  }
+
+  /* Modern Web Guidance: text-wrap: balance for short headings (<= 6 lines) */
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  /* Modern Web Guidance: text-wrap: pretty for multi-line body paragraphs to avoid orphans */
+  p,
+  blockquote,
+  li {
+    text-wrap: pretty;
+  }
+
+  /* High-contrast focus ring using :focus-visible with outline-offset */
+  :where(a:any-link, button, input, select, textarea, summary):focus-visible {
+    outline: 3px solid #FF6500;
+    outline-offset: 3px;
+  }
+}
+
+/* Visually hidden utility that becomes visible when focused (for Skip Links) */
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Modern Web Guidance: Validate input only after user interaction (:user-invalid / :user-valid) */
+.form-input:user-invalid,
+.form-input.user-invalid-fallback {
+  border-color: #dc2626 !important;
+  background-color: #fef2f2 !important;
+}
+
+.form-input:user-valid,
+.form-input.user-valid-fallback {
+  border-color: #16a34a !important;
+}
+
+.field-error-msg {
+  display: none;
+}
+
+.form-input:user-invalid ~ .field-error-msg,
+.form-input.user-invalid-fallback ~ .field-error-msg {
+  display: flex;
+}
