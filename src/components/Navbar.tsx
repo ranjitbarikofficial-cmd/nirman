@@ -94,10 +94,10 @@ export default function Navbar() {
       </div>
 
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        {/* Brand Wordmark Only: all lowercase ("small letter") in distinct editorial italic serif font */}
+        {/* Brand Wordmark Only: slightly bigger lowercase editorial italic serif */}
         <Link
           href="/"
-          className="font-brand text-2xl font-bold italic lowercase tracking-wide text-brand-navy transition-colors hover:text-brand-orange"
+          className="font-brand text-3xl font-bold italic lowercase tracking-wide text-brand-navy transition-colors duration-300 hover:text-brand-orange sm:text-[34px] sm:leading-none"
         >
           {SITE_CONFIG.agencyName}
         </Link>
