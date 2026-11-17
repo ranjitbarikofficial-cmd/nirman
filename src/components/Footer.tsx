@@ -53,9 +53,14 @@ export default function Footer() {
           <div className="space-y-4">
             <Link
               href="/"
-              className="inline-block font-brand text-3xl font-bold italic lowercase tracking-wide text-white transition-colors duration-300 hover:text-brand-orange sm:text-[34px] sm:leading-none"
+              className="inline-flex items-baseline gap-1.5 font-brand italic lowercase tracking-wide text-white transition-colors duration-300 hover:text-brand-orange"
             >
-              {SITE_CONFIG.agencyName}
+              <span className="text-3xl font-bold sm:text-[34px] sm:leading-none">
+                bfy
+              </span>
+              <span className="text-sm font-semibold text-slate-300 sm:text-base">
+                (build for you)
+              </span>
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-slate-400">
               {SITE_CONFIG.description}

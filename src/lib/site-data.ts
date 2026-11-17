@@ -1,6 +1,6 @@
 /**
  * Central Site Configuration, Country-Wise Currencies, and Multilingual Translations
- * Agency Name: Nirman
+ * Agency Name: BFY (Build For You)
  */
 
 export type CountryCode = "IN" | "US" | "GB" | "EU" | "AE" | "AU" | "CA";
@@ -333,7 +333,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       servicesTag: "What We Can Build For You",
       servicesTitle: "Everything You Need to Win Customers Online",
       servicesSub:
-        "Whether you are launching your very first business or upgrading an outdated site, Nirman builds websites designed around one thing: growing your revenue.",
+        "Whether you are launching your very first business or upgrading an outdated site, BFY (Build For You) builds websites designed around one thing: growing your revenue.",
       fromLabel: "From",
       exploreLabel: "Explore",
       notSureBadge: "Free Expert Guidance",
@@ -341,7 +341,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       notSureDesc:
         "Tell us what you sell and who your customers are. We'll recommend the exact setup that brings the highest return on your budget.",
       notSureCta: "Book a Free 15-Min Call",
-      whyTag: "Why Business Owners Choose Nirman",
+      whyTag: "Why Business Owners Choose BFY",
       whyTitle: "Zero Confusing Tech Jargon. Just Real Business Results.",
       whySub:
         "You have a business to run. We handle the design, copywriting, mobile optimization, and setup so you can focus on serving your customers.",
@@ -396,7 +396,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
         "100% free, no-obligation advice. We never share your information.",
       thankYouTitle: "Thank You! We've Received Your Request",
       thankYouSub:
-        "One of our friendly project specialists at Nirman will review your goals and get back to you within 4 business hours.",
+        "One of our friendly project specialists at BFY will review your goals and get back to you within 4 business hours.",
     },
   },
   hi: {
@@ -430,7 +430,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       servicesTag: "हम आपके लिए क्या बना सकते हैं",
       servicesTitle: "ऑनलाइन ग्राहक जीतने के लिए ज़रूरी हर सुविधा",
       servicesSub:
-        "चाहे आप नया बिज़नेस शुरू कर रहे हों या पुरानी वेबसाइट बदल रहे हों, Nirman आपके मुनाफे को बढ़ाने वाली वेबसाइट बनाता है।",
+        "चाहे आप नया बिज़नेस शुरू कर रहे हों या पुरानी वेबसाइट बदल रहे हों, BFY आपके मुनाफे को बढ़ाने वाली वेबसाइट बनाता है।",
       fromLabel: "शुरुआती कीमत",
       exploreLabel: "विस्तार से देखें",
       notSureBadge: "मुफ़्त विशेषज्ञ सलाह",
@@ -438,7 +438,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       notSureDesc:
         "हमें बताएं कि आप क्या बेचते हैं। हम आपके बजट में सबसे बेहतरीन रिटर्न देने वाला प्लान सुझाएंगे।",
       notSureCta: "15-मिनट की फ्री कॉल बुक करें",
-      whyTag: "बिज़नेस मालिक Nirman को क्यों चुनते हैं",
+      whyTag: "बिज़नेस मालिक BFY को क्यों चुनते हैं",
       whyTitle: "कोई उलझाने वाली तकनीकी भाषा नहीं। सिर्फ असली बिज़नेस रिज़ल्ट।",
       whySub:
         "डिज़ाइन, कंटेंट, मोबाइल स्पीड और सेटअप हम संभालते हैं ताकि आप अपने बिज़नेस पर ध्यान दे सकें।",
@@ -488,7 +488,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       privacyNote: "100% मुफ़्त सलाह। आपकी जानकारी पूरी तरह सुरक्षित रहती है।",
       thankYouTitle: "धन्यवाद! हमें आपका अनुरोध मिल गया है",
       thankYouSub:
-        "Nirman की टीम आपके लक्ष्यों की समीक्षा करेगी और 4 कामकाजी घंटों में आपसे संपर्क करेगी।",
+        "BFY की टीम आपके लक्ष्यों की समीक्षा करेगी और 4 कामकाजी घंटों में आपसे संपर्क करेगी।",
     },
   },
   es: {
@@ -522,7 +522,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       servicesTag: "Lo Que Construimos Para Ti",
       servicesTitle: "Todo Lo Que Necesitas Para Ganar Clientes Online",
       servicesSub:
-        "Ya sea que lances tu primer negocio o renueves tu web actual, en Nirman diseñamos sitios enfocados en hacer crecer tus ventas.",
+        "Ya sea que lances tu primer negocio o renueves tu web actual, en BFY diseñamos sitios enfocados en hacer crecer tus ventas.",
       fromLabel: "Desde",
       exploreLabel: "Explorar",
       notSureBadge: "Asesoría Experta Gratis",
@@ -530,7 +530,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       notSureDesc:
         "Cuéntanos qué vendes y quiénes son tus clientes. Te recomendaremos el plan con mejor retorno para tu presupuesto.",
       notSureCta: "Reservar Llamada de 15 Min",
-      whyTag: "Por Qué Elegir Nirman",
+      whyTag: "Por Qué Elegir BFY",
       whyTitle: "Cero Jerga Técnica. Solo Resultados Reales Para Tu Negocio.",
       whySub:
         "Tú diriges tu negocio; nosotros nos encargamos del diseño, textos, versión móvil y configuración en Google.",
@@ -581,7 +581,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       privacyNote: "100% gratis y sin compromiso. Nunca compartimos tus datos.",
       thankYouTitle: "¡Gracias! Hemos Recibido Tu Solicitud",
       thankYouSub:
-        "Un especialista de Nirman revisará tus objetivos y te responderá en menos de 4 horas hábiles.",
+        "Un especialista de BFY revisará tus objetivos y te responderá en menos de 4 horas hábiles.",
     },
   },
   fr: {
@@ -615,7 +615,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       servicesTag: "Ce Que Nous Construisons Pour Vous",
       servicesTitle: "Tout Pour Attirer des Clients en Ligne",
       servicesSub:
-        "Que vous lanciez votre activité ou modernisiez un site existant, Nirman conçoit des sites focalisés sur votre chiffre d'affaires.",
+        "Que vous lanciez votre activité ou modernisiez un site existant, BFY conçoit des sites focalisés sur votre chiffre d'affaires.",
       fromLabel: "À partir de",
       exploreLabel: "Découvrir",
       notSureBadge: "Conseil Gratuit",
@@ -623,7 +623,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       notSureDesc:
         "Expliquez-nous votre activité et nous vous recommanderons la solution la plus rentable pour votre budget.",
       notSureCta: "Réserver un Appel de 15 Min",
-      whyTag: "Pourquoi Choisir Nirman",
+      whyTag: "Pourquoi Choisir BFY",
       whyTitle: "Zéro Jargon Technique. Uniquement des Résultats Concrets.",
       whySub:
         "Concentrez-vous sur vos clients : nous gérons le design, les textes, le mobile et le référencement Google.",
@@ -674,7 +674,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       privacyNote: "100% gratuit et sans engagement.",
       thankYouTitle: "Merci ! Votre Demande a Bien Été Reçue",
       thankYouSub:
-        "Un conseiller Nirman vous recontactera sous 4 heures ouvrées.",
+        "Un conseiller BFY vous recontactera sous 4 heures ouvrées.",
     },
   },
   ar: {
@@ -708,7 +708,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       servicesTag: "ماذا يمكننا أن نبني لك",
       servicesTitle: "كل ما تحتاجه لكسب العملاء عبر الإنترنت",
       servicesSub:
-        "سواء كنت تطلق مشروعك الأول أو تطور موقعك الحالي، تبني Nirman مواقع تركز على زيادة مبيعاتك.",
+        "سواء كنت تطلق مشروعك الأول أو تطور موقعك الحالي، تبني BFY مواقع تركز على زيادة مبيعاتك.",
       fromLabel: "يبدأ من",
       exploreLabel: "استكشف",
       notSureBadge: "إرشاد مجاني",
@@ -716,7 +716,7 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       notSureDesc:
         "أخبرنا بما تقدمه وسنقترح عليك الحل الأنسب لميزانيتك لتحقيق أعلى عائد.",
       notSureCta: "احجز مكالمة مجانية لمدة 15 دقيقة",
-      whyTag: "لماذا يختار أصحاب الأعمال Nirman",
+      whyTag: "لماذا يختار أصحاب الأعمال BFY",
       whyTitle: "بدون مصطلحات تقنية معقدة. نتائج أعمال حقيقية فقط.",
       whySub:
         "تفرغ لإدارة عملك بينما نتولى نحن التصميم والكتابة وتجربة الجوال والظهور في محركات البحث.",
@@ -765,21 +765,21 @@ export const TRANSLATIONS: Record<LanguageCode, UITranslations> = {
       privacyNote: "استشارة مجانية 100% بدون أي التزام.",
       thankYouTitle: "شكراً لك! تم استلام طلبك بنجاح",
       thankYouSub:
-        "سيتواصل معك فريق Nirman خلال 4 ساعات عمل لمناقشة مشروعك.",
+        "سيتواصل معك فريق BFY خلال 4 ساعات عمل لمناقشة مشروعك.",
     },
   },
 };
 
 export const SITE_CONFIG = {
-  agencyName: "Nirman",
+  agencyName: "BFY (Build For You)",
   tagline: "We Build Websites That Bring Your Business Online",
   description:
-    "Nirman helps business owners and first-time entrepreneurs get more customers, sales, and trust online with fast, mobile-friendly websites and online stores.",
-  url: "https://nirman.agency",
-  email: "hello@nirman.agency",
+    "BFY (Build For You) helps business owners and first-time entrepreneurs get more customers, sales, and trust online with fast, mobile-friendly websites and online stores.",
+  url: "https://bfy.agency",
+  email: "hello@bfy.agency",
   phone: "+91 9040408690",
   whatsappNumber: "919040408690", // Digits only with country code for wa.me link
-  whatsappMessage: "Hi Nirman! I'm interested in getting a website for my business.",
+  whatsappMessage: "Hi BFY! I'm interested in getting a website for my business.",
   address: "Bhubaneswar",
   calendlyUrl: "/contact#book-call",
   socials: {
@@ -1057,7 +1057,7 @@ export const TESTIMONIALS = [
   {
     id: 1,
     quote:
-      "I postponed getting a website for two years because I thought it would be complicated and expensive. Nirman handled everything in plain English, and within our first month live we booked 19 new clients directly from Google.",
+      "I postponed getting a website for two years because I thought it would be complicated and expensive. BFY handled everything in plain English, and within our first month live we booked 19 new clients directly from Google.",
     name: "Sarah Jenkins",
     role: "Founder, Oakridge Family Dental",
     metric: "19 new clients in month one",
@@ -1066,7 +1066,7 @@ export const TESTIMONIALS = [
   {
     id: 2,
     quote:
-      "Our old website was embarrassing to send to customers. After Nirman's redesign, people actually compliment our site on sales calls—and our quote requests have more than doubled without spending extra on ads.",
+      "Our old website was embarrassing to send to customers. After BFY's redesign, people actually compliment our site on sales calls—and our quote requests have more than doubled without spending extra on ads.",
     name: "Marcus Vance",
     role: "Owner, Summit Heating & Cooling",
     metric: "2.4x more quote requests",
@@ -1075,7 +1075,7 @@ export const TESTIMONIALS = [
   {
     id: 3,
     quote:
-      "Launching our online store with Nirman felt effortless. They set up our products, payments, and shipping in three weeks, and showed me how to manage orders from my phone in 15 minutes. Best investment we've made.",
+      "Launching our online store with BFY felt effortless. They set up our products, payments, and shipping in three weeks, and showed me how to manage orders from my phone in 15 minutes. Best investment we've made.",
     name: "Elena Rostova",
     role: "Co-Founder, Lumina Coffee Roasters",
     metric: "Launched in 3 weeks",

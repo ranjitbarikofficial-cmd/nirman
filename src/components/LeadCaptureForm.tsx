@@ -225,7 +225,7 @@ export default function LeadCaptureForm({
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <a
             href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
-              "Hi Nirman! I just submitted the consultation form on your website."
+              "Hi BFY! I just submitted the consultation form on your website."
             )}`}
             target="_blank"
             rel="noopener noreferrer"

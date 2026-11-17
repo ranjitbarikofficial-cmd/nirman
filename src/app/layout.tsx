@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   },
   description: SITE_CONFIG.description,
   keywords: [
-    "Nirman web design agency",
+    "BFY web design agency",
+    "Build For You web agency",
     "business website design",
     "online store builder",
     "high converting landing page",

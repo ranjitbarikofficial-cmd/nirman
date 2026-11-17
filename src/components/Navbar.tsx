@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-1.5 sm:px-6 lg:px-8">
           <p className="hidden font-medium text-slate-300 sm:block">
             <span className="font-brand text-sm font-bold italic lowercase text-brand-orange">
-              nirman
+              bfy (build for you)
             </span>{" "}
             — {t.hero.badge}
           </p>
@@ -97,9 +97,14 @@ export default function Navbar() {
         {/* Brand Wordmark Only: slightly bigger lowercase editorial italic serif */}
         <Link
           href="/"
-          className="font-brand text-3xl font-bold italic lowercase tracking-wide text-brand-navy transition-colors duration-300 hover:text-brand-orange sm:text-[34px] sm:leading-none"
+          className="inline-flex items-baseline gap-1.5 font-brand italic lowercase tracking-wide text-brand-navy transition-colors duration-300 hover:text-brand-orange"
         >
-          {SITE_CONFIG.agencyName}
+          <span className="text-3xl font-bold sm:text-[34px] sm:leading-none">
+            bfy
+          </span>
+          <span className="text-sm font-semibold sm:text-base">
+            (build for you)
+          </span>
         </Link>
 
         {/* Desktop Primary Navigation */}
