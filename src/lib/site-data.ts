@@ -777,10 +777,10 @@ export const SITE_CONFIG = {
     "Nirman helps business owners and first-time entrepreneurs get more customers, sales, and trust online with fast, mobile-friendly websites and online stores.",
   url: "https://nirman.agency",
   email: "hello@nirman.agency",
-  phone: "+1 (555) 234-5678",
-  whatsappNumber: "15552345678", // Digits only with country code for wa.me link
+  phone: "+91 9040408690",
+  whatsappNumber: "919040408690", // Digits only with country code for wa.me link
   whatsappMessage: "Hi Nirman! I'm interested in getting a website for my business.",
-  address: "120 Broadway, Suite 400, New York, NY 10271",
+  address: "Bhubaneswar",
   calendlyUrl: "/contact#book-call",
   socials: {
     linkedin: "https://linkedin.com",
