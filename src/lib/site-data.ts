@@ -788,7 +788,9 @@ export const SITE_CONFIG = {
     twitter: "https://x.com",
     facebook: "https://facebook.com",
   },
-  // Optional: Add your Formspree endpoint or Google Apps Script Web App URL here
+  // Paste your Google Apps Script Web App URL here to save every customer lead directly into Google Sheets / Excel
+  googleSheetWebhookUrl: "",
+  // Optional: Formspree endpoint
   formspreeEndpoint: "",
 };
 

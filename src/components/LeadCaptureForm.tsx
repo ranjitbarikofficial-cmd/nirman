@@ -25,6 +25,9 @@ export default function LeadCaptureForm({
   const [selectedPackage, setSelectedPackage] = useState(defaultPackage);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [lastLeadWhatsAppText, setLastLeadWhatsAppText] = useState(
+    "Hi BFY! I just submitted the consultation form on your website."
+  );
   const [serverError, setServerError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -163,16 +166,68 @@ export default function LeadCaptureForm({
 
     setIsSubmitting(true);
     const formData = new FormData(form);
+    const rawEntries = Object.fromEntries(formData.entries());
+    const submittedAt = new Date().toISOString();
     const payload = {
-      ...Object.fromEntries(formData.entries()),
+      submittedAt,
+      name: String(rawEntries.name || ""),
+      email: String(rawEntries.email || ""),
+      phone: String(rawEntries.phone || ""),
+      businessType: String(rawEntries.businessType || ""),
+      budgetRange: String(rawEntries.budgetRange || "Not specified"),
+      projectDetails: String(rawEntries.projectDetails || ""),
       selectedCountry: currency.countryName,
       selectedCurrency: currency.currencyCode,
       selectedLanguage: language,
     };
 
+    // Save locally so the owner can view/export to Excel (.csv) anytime at /admin
     try {
+      const existingRaw = localStorage.getItem("bfy_customer_leads");
+      const existingLeads = existingRaw ? JSON.parse(existingRaw) : [];
+      existingLeads.unshift(payload);
+      localStorage.setItem(
+        "bfy_customer_leads",
+        JSON.stringify(existingLeads.slice(0, 500))
+      );
+    } catch {
+      // Ignore storage errors in private browsing
+    }
+
+    // Prepare pre-filled WhatsApp summary with customer's exact message
+    const waSummary = [
+      "Hi BFY! I just submitted the website consultation form:",
+      `• Name: ${payload.name}`,
+      `• Phone: ${payload.phone}`,
+      `• Email: ${payload.email}`,
+      `• Website Type: ${payload.businessType}`,
+      `• Budget: ${payload.budgetRange}`,
+      payload.projectDetails ? `• Details: ${payload.projectDetails}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n");
+    setLastLeadWhatsAppText(waSummary);
+
+    try {
+      const savedSheetUrl =
+        typeof window !== "undefined"
+          ? localStorage.getItem("bfy_google_sheet_webhook") || ""
+          : "";
+      const sheetWebhook =
+        SITE_CONFIG.googleSheetWebhookUrl || savedSheetUrl.trim();
       const endpoint = SITE_CONFIG.formspreeEndpoint;
-      if (endpoint) {
+
+      if (sheetWebhook) {
+        // Send to Google Apps Script Web App (uses text/plain to avoid CORS preflight block)
+        await fetch(sheetWebhook, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
+          body: JSON.stringify(payload),
+        });
+      } else if (endpoint) {
         const response = await fetch(endpoint, {
           method: "POST",
           headers: {
@@ -225,7 +280,7 @@ export default function LeadCaptureForm({
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <a
             href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(
-              "Hi BFY! I just submitted the consultation form on your website."
+              lastLeadWhatsAppText
             )}`}
             target="_blank"
             rel="noopener noreferrer"

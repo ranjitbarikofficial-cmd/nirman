@@ -231,9 +231,15 @@ export default function Footer() {
           <p>
             &copy; {currentYear} {SITE_CONFIG.agencyName}. All rights reserved.
           </p>
-          <p>
-            Designed to turn visitors into loyal customers.
-          </p>
+          <div className="flex items-center gap-4">
+            <span>Designed to turn visitors into loyal customers.</span>
+            <Link
+              href="/admin"
+              className="text-slate-500 underline-offset-2 hover:text-brand-orange hover:underline"
+            >
+              Leads & Excel
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
